@@ -24,6 +24,7 @@ requirements:
     - cffi >=1.0.0
     - pip
     - python
+    - setuptools
     - libaugeas
   run:
     - cffi >=1.0.0
