@@ -1,5 +1,5 @@
 {% set name = "python-augeas" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 
 package:
@@ -7,14 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-augeas-{{ version }}.tar.gz
-  sha256: 5194a49e86b40ffc57055f73d833f87e39dce6fce934683e7d0d5bbb8eff3b8c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python-augeas-{{ version }}.tar.gz
+  sha256: d2334710e12bdec8b6633a7c2b72df4ca24ab79094a3c9e699494fdb62054a10
   patches:
     # https://github.com/hercules-team/python-augeas/pull/53
     - 0001-Ensure-exclude-is-a-tuple.patch
 
 build:
-  number: 5
+  number: 0
   # https://github.com/hercules-team/augeas/issues/612
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
