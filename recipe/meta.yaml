@@ -17,6 +17,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
     - cffi >=1.0.0
     - pip
