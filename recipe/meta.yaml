@@ -11,7 +11,7 @@ source:
   sha256: d2334710e12bdec8b6633a7c2b72df4ca24ab79094a3c9e699494fdb62054a10
 
 build:
-  number: 0
+  number: 1
   # https://github.com/hercules-team/augeas/issues/612
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
