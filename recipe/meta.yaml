@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python-augeas-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/python-augeas-{{ version }}.tar.gz
   sha256: d2334710e12bdec8b6633a7c2b72df4ca24ab79094a3c9e699494fdb62054a10
 
 build:
-  number: 1
+  number: 2
   # https://github.com/hercules-team/augeas/issues/612
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
